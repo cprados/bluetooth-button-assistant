@@ -22,5 +22,6 @@ Installation and configuration:
 - Autoinput Accessibility service must be on. Even if it is I found that autoinput would not be able to interact with the lock screen (as it accessibillity service had stopped). Murphy's law is unforgiving in these cases, making the chance where it it is not meant to work the one where you need to use it. So after struggling a bit with this I found a workaround by desabling accesibility service and enabling it again upon connection of the bluetooth button. For this workaround to work you will need to give tasker permissions to modify Android Secure settings as described in tasker documentation here: https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html
 - The %PIN variable in tasker must be filled with the positions of your PIN separated by commas and updated if you change your PIN.
 - The %ButtonBTAddress and %ButtonBTName must contain the physical address and name of your bluetooth button.
+- There is a reference to a sound "Notifications/OkGoogle.mp3" to make the Google Assistant sond. You might need to record this sound yourself of change it for other notification sound.
 
 I hope it works also for you and find or usefull.
