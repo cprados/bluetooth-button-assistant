@@ -16,10 +16,11 @@ To run this tasker project you will need:
 - Google Assistant app (to be able to lauch the assistant in the phone and not in Android Auto): https://play.google.com/store/apps/details?id=com.google.android.apps.googleassistant
 - Alexa app: https://play.google.com/store/apps/details?id=com.amazon.dee.app
 
-For the unlock process to work, the tasker task needs Always On Display to be on. Upon connection to the bluetooth button it will set Allways On Display to allways. After disconnection it will restore previous configuration.
+Installation and configuration:
 
-It also needs Autoinput Accessibility service to be on. I found that even tough the seeting was activated, sometimes it would not be able to unlock the phone. Murphy's law is unforgiving in these cases, making the chance where it it is not meant to work the one where you need to use it. So after struggling a bit with this I found a workaround by desabling accesibility and enabling it again upon connection of the bluetooth button. For this workaround to work you will need to give tasker permissions to modify Android Secure settings as described in tasker documentation here: https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html
+- Always On Display must be set to be on. This is done automtically upon connection to the bluetooth button it will set Allways On Display to allways. After disconnection it will restore previous configuration.
+- Autoinput Accessibility service must be on. Even if it is I found that autoinput would not be able to interact with the lock screen (as it accessibillity service had stopped). Murphy's law is unforgiving in these cases, making the chance where it it is not meant to work the one where you need to use it. So after struggling a bit with this I found a workaround by desabling accesibility service and enabling it again upon connection of the bluetooth button. For this workaround to work you will need to give tasker permissions to modify Android Secure settings as described in tasker documentation here: https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html
+- The %PIN variable in tasker must be filled with the positions of your PIN separated by commas and updated if you change your PIN.
+- The %ButtonBTAddress and %ButtonBTName must contain the physical address and name of your bluetooth button.
 
-Finally, to make this project work on your phone, you will have to fill in the% PIN variable with the positions of your PIN separated by commas.
-
-Hope it works also for you and find ir usefull.
+I hope it works also for you and find or usefull.
