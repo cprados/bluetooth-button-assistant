@@ -18,10 +18,17 @@ To run this tasker project you will need:
 
 Installation and configuration:
 
+- Phone should be paired to the bluetooth media button. It is preferible that it is also paired to your car bluetooth. If it is connnected via cable to Android Auto it will also work.
 - Always On Display must be set to be on. This is done automtically upon connection to the bluetooth button it will set Allways On Display to allways. After disconnection it will restore previous configuration.
 - Autoinput Accessibility service must be on. Even if it is I found that autoinput would not be able to interact with the lock screen (as it accessibillity service had stopped). Murphy's law is unforgiving in these cases, making the chance where it it is not meant to work the one where you need to use it. So after struggling a bit with this I found a workaround by desabling accesibility service and enabling it again upon connection of the bluetooth button. For this workaround to work you will need to give tasker permissions to modify Android Secure settings as described in tasker documentation here: https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html
 - The %PIN variable in tasker must be filled with the positions of your PIN separated by commas and updated if you change your PIN.
 - The %ButtonBTAddress and %ButtonBTName must contain the physical address and name of your bluetooth button.
 - There is a reference to a sound "Notifications/OkGoogle.mp3" to make the Google Assistant sond. You might need to record this sound yourself of change it for other notification sound.
+
+Usage: 
+- "Play" btton is remapped to run Google Assistant.
+- "Forward" button is remapped to run Alexa.
+- "Back" button is remapped to Andoid "Home" button. It can be used to cancel assitant.
+- First time you press the button it will connect to bluetoooth. I have mapped this event to run Google Assistant also, so to run Alexa you'll have to press the button a second time.
 
 I hope it works also for you and find or usefull.
